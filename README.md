@@ -1,0 +1,126 @@
+﻿# AI Interview Coach
+
+An AI-powered interview preparation platform that transforms a candidate's resume, self-description, and target job description into a personalized interview preparation report.
+
+## 📌 Overview
+
+AI Interview Coach helps candidates prepare for specific job roles instead of relying on generic interview questions.
+
+The application extracts text from an uploaded PDF resume, analyzes the candidate's profile against the provided job description using Google Gemini, and generates a structured interview preparation report.
+
+The report includes:
+
+* Job title
+* Resume-to-job match score
+* Technical interview questions
+* Behavioral interview questions
+* Skill-gap analysis
+* Day-by-day preparation roadmap
+
+---
+
+## ✨ Features
+
+* User registration and login
+* Password hashing with bcrypt
+* Cookie-based JWT authentication
+* Logout token blacklisting
+* Protected interview generation and report pages
+* PDF resume upload and text extraction
+* AI-generated job match score
+* Personalized technical and behavioral interview questions
+* Skill-gap analysis with severity levels
+* Day-by-day preparation roadmap
+* Structured AI response validation
+* MongoDB-based report persistence
+* Expandable interview questions with answer guidance
+* Individual and user-specific interview report retrieval
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React 19
+* Vite
+* React Router DOM
+* Sass
+* Axios
+
+### Backend
+
+* Node.js
+* Express 5
+* ES Modules
+* Multer
+* PDF Parse
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### AI
+
+* Google Gemini
+* `@google/genai`
+* Zod schema validation
+* Structured JSON AI responses
+
+### Authentication
+
+* JSON Web Tokens
+* `jsonwebtoken`
+* `bcryptjs`
+* HTTP cookies
+* `cookie-parser`
+* MongoDB-backed token blacklist
+
+### Tools & Libraries
+
+* Axios
+* CORS
+* dotenv
+* Nodemon
+* Oxlint
+
+---
+
+## 📂 Project Structure
+
+```text
+GenAIProject/
+
+├── backend/
+│   ├── server.js
+│   ├── package.json
+│   └── src/
+│       ├── app.js
+│       ├── controllers/
+│       ├── db/
+│       │   └── db.js
+│       ├── middleware/
+│       │   ├── auth.middleware.js
+│       │   └── file.middleware.js
+│       ├── models/
+│       ├── routes/
+│       └── services/
+│           └── ai.service.js
+│
+├── frontend/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── App.jsx
+│       └── Features/
+│           ├── auth/
+│           └── interview/
+│
+└── README.md
+## 👩‍💻 Author
+
+**Payal**
+
+Built as an AI-powered interview preparation project using React, Node.js, MongoDB, and Google Gemini.
+# AI-Interview-Coach

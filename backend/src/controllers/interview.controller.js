@@ -91,8 +91,43 @@ import interviewReportModel from "../models/interviewReport.model.js";
 // ============================================
 async function generateInterViewReportController(req, res) {
     try {
+<<<<<<< HEAD
         const resumeFile = req.file;
         let resumeContent = "";
+=======
+        // 1. Check Resume File
+        const resumeFile = req.file;
+
+        if (!resumeFile) {
+            return res.status(400).json({
+                message: "Resume file is required",
+            });
+        }
+
+        // 2. Extract Text From PDF
+        let resumeContent = "";
+        try {
+            const parser = new PDFParse({
+                data: resumeFile.buffer,
+            });
+            const result = await parser.getText();
+            resumeContent = result.text?.trim();
+            await parser.destroy();
+        } catch (pdfError) {
+            console.error("PDF Parsing failed:", pdfError);
+            return res.status(400).json({
+                message: "Failed to parse PDF file. Please ensure it is a valid PDF.",
+            });
+        }
+
+        if (!resumeContent) {
+            return res.status(400).json({
+                message: "Could not extract text from resume. Ensure the PDF contains readable text.",
+            });
+        }
+
+        // 3. Get Form Data
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
         const { selfDescription, jobDescription } = req.body;
 
         if (!jobDescription?.trim()) {
@@ -101,6 +136,7 @@ async function generateInterViewReportController(req, res) {
             });
         }
 
+<<<<<<< HEAD
         if (!resumeFile && !selfDescription?.trim()) {
             return res.status(400).json({
                 message: "Upload a resume or provide a self description",
@@ -129,11 +165,23 @@ async function generateInterViewReportController(req, res) {
             }
         }
 
+=======
+        if (!selfDescription?.trim()) {
+            return res.status(400).json({
+                message: "Self description is required",
+            });
+        }
+
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
         // Inside generateInterViewReportController...
 
         const interviewReportByAPI = await generateInterviewReport({
             resume: resumeContent,
+<<<<<<< HEAD
             selfDescription: selfDescription?.trim() || "Not provided",
+=======
+            selfDescription,
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
             jobDescription,
         });
 
@@ -147,7 +195,11 @@ async function generateInterViewReportController(req, res) {
         const interviewReport = await interviewReportModel.create({
             user: req.user.id,
             resume: resumeContent,
+<<<<<<< HEAD
             selfDescription: selfDescription?.trim() || "",
+=======
+            selfDescription,
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
             jobDescription,
             title: interviewReportByAPI.title || "Interview Report",
             matchScore: interviewReportByAPI.matchScore || 0,
@@ -165,6 +217,7 @@ async function generateInterViewReportController(req, res) {
     } catch (error) {
         console.error("Interview report generation error:", error);
 
+<<<<<<< HEAD
         // Errors from Gemini are upstream-service errors. Surface a useful,
         // safe message instead of collapsing every failure into a generic 500.
         const geminiStatus = Number(error?.status);
@@ -193,6 +246,8 @@ async function generateInterViewReportController(req, res) {
             });
         }
 
+=======
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
         // Mongoose Schema Validation Failure
         if (error.name === "ValidationError") {
             const errors = Object.values(error.errors).map((err) => err.message);
@@ -269,4 +324,8 @@ export default {
     generateInterViewReportController,
     getInterViewReportController,
     getAllInterviewReportController,
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

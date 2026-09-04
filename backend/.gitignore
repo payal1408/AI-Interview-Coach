@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 node_modules/
 .env
 .env.*
 *.log
+=======
+.env
+node_modules
+/notes.txt
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

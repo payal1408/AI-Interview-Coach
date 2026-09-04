@@ -3,6 +3,7 @@ import bcrypt from "bcryptjs"
 import jwt from 'jsonwebtoken'
 import tokenBlackListModel from '../models/blacklist.model.js'
 
+<<<<<<< HEAD
 const isProduction = process.env.NODE_ENV === "production";
 const cookieName = process.env.COOKIE_NAME || "token";
 const cookieOptions = {
@@ -15,6 +16,8 @@ const cookieOptions = {
     ...(process.env.COOKIE_DOMAIN ? { domain: process.env.COOKIE_DOMAIN } : {}),
 };
 
+=======
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 /**RegisterUserController
  * @name registerUserController
  *@route POST /api/auth/register
@@ -54,7 +57,11 @@ async function registerUserController(req, res) {
             expiresIn: "1d"
         }
     )
+<<<<<<< HEAD
     res.cookie(cookieName, token, cookieOptions)
+=======
+    res.cookie("token", token)
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
     res.status(201).json({
         message: "user registered successfully",
@@ -96,7 +103,11 @@ async function loginUserController(req, res) {
             expiresIn: "1d"
         }
     )
+<<<<<<< HEAD
     res.cookie(cookieName, token, cookieOptions)
+=======
+    res.cookie("token", token)
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
     res.status(201).json({
         message: "user logged in successfully",
@@ -115,13 +126,21 @@ async function loginUserController(req, res) {
  * @access public
  */
 async function logoutUserController(req, res) {
+<<<<<<< HEAD
     const token = req.cookies[cookieName];
+=======
+    const token = req.cookies.token;
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
     if (token) {
         await tokenBlackListModel.create({ token });
     }
 
+<<<<<<< HEAD
     res.clearCookie(cookieName, cookieOptions);
+=======
+    res.clearCookie("token");
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
     return res.status(200).json({
         message: "User logged out successfully"
@@ -157,4 +176,8 @@ export default {
     loginUserController,
     logoutUserController,
     getMeController
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

@@ -11,8 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+<<<<<<< HEAD
 .env
 .env.*
+=======
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +27,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+=======
+.env
+>>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

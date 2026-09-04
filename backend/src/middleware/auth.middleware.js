@@ -3,11 +3,7 @@ import tokenBlackListModel from '../models/blacklist.model.js';
 
 
 async function authUser(req, res, next) {
-<<<<<<< HEAD
     const token = req.cookies[process.env.COOKIE_NAME || "token"]
-=======
-    const token = req.cookies.token
->>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
 
     if (!token) {
         return res.status(401).json({
@@ -37,8 +33,4 @@ async function authUser(req, res, next) {
         });
     }
 }
-<<<<<<< HEAD
 export default { authUser }
-=======
-export default { authUser }
->>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

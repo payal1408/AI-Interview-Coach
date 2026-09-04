@@ -34,15 +34,9 @@ const Home = () => {
             return;
         }
 
-<<<<<<< HEAD
         // Keep this in sync with the server-side Multer limit.
         if (file.size > 3 * 1024 * 1024) {
             alert("Resume size must be less than 3MB.");
-=======
-        // Max 5 MB
-        if (file.size > 5 * 1024 * 1024) {
-            alert("Resume size must be less than 5MB.");
->>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
             e.target.value = "";
             setResume(null);
             return;
@@ -320,11 +314,7 @@ system design..."`}
                                 </strong>
 
                                 <span>
-<<<<<<< HEAD
                                     PDF (Max 3MB)
-=======
-                                    PDF (Max 5MB)
->>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1
                                 </span>
 
                             </label>
@@ -453,8 +443,4 @@ system design..."`}
     );
 };
 
-<<<<<<< HEAD
 export default Home;
-=======
-export default Home;
->>>>>>> 0ce6e125e37f70dafffdcfe091008b8c69a78ee1

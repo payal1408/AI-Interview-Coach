@@ -1,0 +1,152 @@
+{
+  match_score: 80,
+  technical_questions: [
+    {
+      question: 'How did you handle user authentication in your AI Post Creator project, and how would you implement JSON Web Tokens (JWT) securely in Express.js?',
+      intention: "Evaluates the candidate's understanding of authentication, security best practices, and knowledge of JWT as required by the job description.",
+      answer_guidance: 'The candidate should explain the login flow: hashing passwords using bcrypt, generating a signed JWT upon successful authentication, returning it to the client, and using a custom middleware in Express to verify the token in authorization headers for protected routes.'
+    },
+    {
+      question: 'In Node.js, how does the Event Loop handle asynchronous I/O operations, and how do you handle unexpected errors in async/await functions?',
+      intention: 'Tests fundamental knowledge of Node.js architecture and error-handling best practices in backend applications.',
+      answer_guidance: 'The response should cover the event loop phases (call stack, callback queue, microtask queue) and emphasize wrapping async logic in try-catch blocks or using custom higher-order Express error-handling middleware.'
+    },
+    {
+      question: 'How do you optimize MongoDB query performance when dealing with large datasets in Express.js?',
+      intention: 'Assesses knowledge of MongoDB database management, indexing, and optimization techniques.',
+      answer_guidance: 'The candidate should discuss creating appropriate single or compound indexes, using projection to return only required fields, avoiding expensive aggregation pipelines where simple queries suffice, and utilizing pagination (limit/skip or cursor-based).'
+    },
+    {
+      question: 'When integrating third-party APIs like Google Gemini API in your backend, how do you handle API rate limits, long-running requests, and secret management?',
+      intention: 'Checks practical backend development skills, third-party API integration strategies, and secure coding habits.',
+      answer_guidance: 'The candidate should mention storing API keys safely using environment variables (.env), implementing retry logic or rate-limiting middleware, using asynchronous jobs/queues if requests take long, and returning appropriate error status codes to the client.'
+    }
+  ],
+  behavioral_questions: [
+    {
+      question: 'You mentioned in your self-description that you enjoy debugging problems. Can you describe a complex backend issue you encountered in one of your projects and how you resolved it?',
+      intention: 'Assesses practical problem-solving ability, analytical thinking, and persistence under technical challenges.',
+      answer_guidance: 'Look for a clear STAR (Situation, Task, Action, Result) structure. The candidate should describe the symptoms, the tools used to trace the bug (e.g., Postman, logs, debugging breakpoints), the root cause, and the permanent fix implemented.'
+    },
+    {
+      question: 'Your previous internship was focused on Frontend Development, but this role is for a Backend Developer. What steps have you taken to prepare yourself specifically for a dedicated backend engineering role?',
+      intention: 'Evaluates domain interest, clarity of career goals, and self-directed learning ability.',
+      answer_guidance: 'The candidate should highlight their full-stack project work focusing on Express/MongoDB API design, their deep dive into server-side logic, database management, and Data Structures & Algorithms practice.'
+    }
+  ],
+  missing_skills: [
+    { skill: 'Redis', severity: 'medium' },
+    { skill: 'Docker', severity: 'medium' },
+    { skill: 'Cloud Services (AWS/GCP/Azure)', severity: 'medium' },
+    { skill: 'Microservices Architecture', severity: 'low' }
+  ],
+  preparation_plan: [
+    {
+      day: 1,
+      focus: 'Node.js Core Concepts & Asynchronous Programming',
+      tasks: [Array]
+    },
+    {
+      day: 2,
+      focus: 'RESTful API Design & Authentication',
+      tasks: [Array]
+    },
+    {
+      day: 3,
+      focus: 'MongoDB & Mongoose Optimization',
+      tasks: [Array]
+    },
+    { day: 4, focus: 'Caching & Basics of Redis', tasks: [Array] },
+    {
+      day: 5,
+      focus: 'Docker & Application Containerization Basics',
+      tasks: [Array]
+    },
+    {
+      day: 6,
+      focus: 'Third-Party API Integration & System Security',
+      tasks: [Array]
+    },
+    {
+      day: 7,
+      focus: 'Mock Technical Interview & Behavioral Prep',
+      tasks: [Array]
+    }
+  ]
+}
+Interview Report Generated: {
+  match_score: 80,
+  technical_questions: [
+    {
+      question: 'How did you handle user authentication in your AI Post Creator project, and how would you implement JSON Web Tokens (JWT) securely in Express.js?',
+      intention: "Evaluates the candidate's understanding of authentication, security best practices, and knowledge of JWT as required by the job description.",
+      answer_guidance: 'The candidate should explain the login flow: hashing passwords using bcrypt, generating a signed JWT upon successful authentication, returning it to the client, and using a custom middleware in Express to verify the token in authorization headers for protected routes.'
+    },
+    {
+      question: 'In Node.js, how does the Event Loop handle asynchronous I/O operations, and how do you handle unexpected errors in async/await functions?',
+      intention: 'Tests fundamental knowledge of Node.js architecture and error-handling best practices in backend applications.',
+      answer_guidance: 'The response should cover the event loop phases (call stack, callback queue, microtask queue) and emphasize wrapping async logic in try-catch blocks or using custom higher-order Express error-handling middleware.'
+    },
+    {
+      question: 'How do you optimize MongoDB query performance when dealing with large datasets in Express.js?',
+      intention: 'Assesses knowledge of MongoDB database management, indexing, and optimization techniques.',
+      answer_guidance: 'The candidate should discuss creating appropriate single or compound indexes, using projection to return only required fields, avoiding expensive aggregation pipelines where simple queries suffice, and utilizing pagination (limit/skip or cursor-based).'
+    },
+    {
+      question: 'When integrating third-party APIs like Google Gemini API in your backend, how do you handle API rate limits, long-running requests, and secret management?',
+      intention: 'Checks practical backend development skills, third-party API integration strategies, and secure coding habits.',
+      answer_guidance: 'The candidate should mention storing API keys safely using environment variables (.env), implementing retry logic or rate-limiting middleware, using asynchronous jobs/queues if requests take long, and returning appropriate error status codes to the client.'
+    }
+  ],
+  behavioral_questions: [
+    {
+      question: 'You mentioned in your self-description that you enjoy debugging problems. Can you describe a complex backend issue you encountered in one of your projects and how you resolved it?',
+      intention: 'Assesses practical problem-solving ability, analytical thinking, and persistence under technical challenges.',
+      answer_guidance: 'Look for a clear STAR (Situation, Task, Action, Result) structure. The candidate should describe the symptoms, the tools used to trace the bug (e.g., Postman, logs, debugging breakpoints), the root cause, and the permanent fix implemented.'
+    },
+    {
+      question: 'Your previous internship was focused on Frontend Development, but this role is for a Backend Developer. What steps have you taken to prepare yourself specifically for a dedicated backend engineering role?',
+      intention: 'Evaluates domain interest, clarity of career goals, and self-directed learning ability.',
+      answer_guidance: 'The candidate should highlight their full-stack project work focusing on Express/MongoDB API design, their deep dive into server-side logic, database management, and Data Structures & Algorithms practice.'
+    }
+  ],
+  missing_skills: [
+    { skill: 'Redis', severity: 'medium' },
+    { skill: 'Docker', severity: 'medium' },
+    { skill: 'Cloud Services (AWS/GCP/Azure)', severity: 'medium' },
+    { skill: 'Microservices Architecture', severity: 'low' }
+  ],
+  preparation_plan: [
+    {
+      day: 1,
+      focus: 'Node.js Core Concepts & Asynchronous Programming',
+      tasks: [Array]
+    },
+    {
+      day: 2,
+      focus: 'RESTful API Design & Authentication',
+      tasks: [Array]
+    },
+    {
+      day: 3,
+      focus: 'MongoDB & Mongoose Optimization',
+      tasks: [Array]
+    },
+    { day: 4, focus: 'Caching & Basics of Redis', tasks: [Array] },
+    {
+      day: 5,
+      focus: 'Docker & Application Containerization Basics',
+      tasks: [Array]
+    },
+    {
+      day: 6,
+      focus: 'Third-Party API Integration & System Security',
+      tasks: [Array]
+    },
+    {
+      day: 7,
+      focus: 'Mock Technical Interview & Behavioral Prep',
+      tasks: [Array]
+    }
+  ]
+}

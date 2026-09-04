@@ -1,0 +1,1049 @@
+.home {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px 30px 12px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(240, 43, 122, 0.07),
+            transparent 35%
+        ),
+        #090d12;
+
+    color: #f3f4f6;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+
+    // =====================================================
+    // HERO / HEADER
+    // =====================================================
+
+    .hero {
+        width: 100%;
+        max-width: 900px;
+
+        flex-shrink: 0;
+
+        margin-bottom: 20px;
+
+        text-align: center;
+
+        h1 {
+            margin: 0;
+
+            color: #f3f4f6;
+
+            font-size: 34px;
+            font-weight: 750;
+
+            line-height: 1.15;
+
+            letter-spacing: -0.035em;
+
+            span {
+                color: #f02b7a;
+
+                text-shadow:
+                    0 0 25px rgba(240, 43, 122, 0.12);
+            }
+        }
+
+        p {
+            max-width: 650px;
+
+            margin: 8px auto 0;
+
+            color: #747d89;
+
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+
+    // =====================================================
+    // MAIN CARD
+    // =====================================================
+
+    .interview-card {
+        width: 100%;
+        max-width: 920px;
+
+        height: 535px;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+        background: #121820;
+
+        border: 1px solid #252d37;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 18px 50px rgba(0, 0, 0, 0.35),
+            0 0 0 1px rgba(255, 255, 255, 0.01);
+
+
+        // =================================================
+        // FORM CONTENT
+        // =================================================
+
+        .form-content {
+            width: 100%;
+            height: 470px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                minmax(0, 1fr);
+
+            box-sizing: border-box;
+        }
+
+
+        // =================================================
+        // LEFT SECTION
+        // =================================================
+
+        .job-section {
+            min-width: 0;
+
+            padding: 22px 24px;
+
+            box-sizing: border-box;
+
+            border-right: 1px solid #29313b;
+        }
+
+
+        // =================================================
+        // RIGHT SECTION
+        // =================================================
+
+        .profile-section {
+            min-width: 0;
+
+            padding: 22px 24px;
+
+            box-sizing: border-box;
+        }
+
+
+        // =================================================
+        // SECTION HEADER
+        // =================================================
+
+        .section-header {
+            width: 100%;
+            height: 25px;
+
+            margin-bottom: 11px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 10px;
+
+            box-sizing: border-box;
+
+            .title-wrapper {
+                min-width: 0;
+
+                display: flex;
+                align-items: center;
+
+                gap: 8px;
+
+                .section-icon {
+                    flex-shrink: 0;
+
+                    color: #e62c78;
+
+                    font-size: 16px;
+                }
+
+                h2 {
+                    margin: 0;
+
+                    color: #e7e9ec;
+
+                    font-size: 16px;
+                    font-weight: 650;
+
+                    line-height: 1;
+
+                    white-space: nowrap;
+                }
+            }
+        }
+
+
+        // =================================================
+        // BADGES
+        // =================================================
+
+        .badge {
+            flex-shrink: 0;
+
+            padding: 4px 8px;
+
+            border-radius: 4px;
+
+            font-size: 9px;
+            font-weight: 750;
+
+            letter-spacing: 0.04em;
+
+            white-space: nowrap;
+        }
+
+        .required,
+        .best {
+            background: rgba(240, 43, 122, 0.12);
+
+            color: #ed347e;
+
+            border: 1px solid rgba(240, 43, 122, 0.08);
+        }
+
+
+        // =================================================
+        // JOB DESCRIPTION TEXTAREA
+        // =================================================
+
+        .textarea-wrapper {
+            position: relative;
+
+            width: 100%;
+            height: 405px;
+
+            box-sizing: border-box;
+
+            textarea {
+                width: 100%;
+                height: 100%;
+
+                min-width: 0;
+
+                padding: 15px;
+
+                box-sizing: border-box;
+
+                background: #1b2130;
+
+                border: 1px solid #252e3b;
+
+                border-radius: 7px;
+
+                outline: none;
+
+                color: #dfe3e8;
+
+                font-family: inherit;
+
+                font-size: 13px;
+
+                line-height: 1.6;
+
+                resize: none;
+
+                transition:
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease;
+
+                &::placeholder {
+                    color: #626c79;
+                }
+
+                &:hover {
+                    border-color: #343e4c;
+                }
+
+                &:focus {
+                    border-color: #e02b78;
+
+                    box-shadow:
+                        0 0 0 3px rgba(224, 43, 120, 0.08);
+                }
+            }
+
+            .character-count {
+                position: absolute;
+
+                right: 11px;
+                bottom: 10px;
+
+                color: #737c88;
+
+                font-size: 10px;
+
+                pointer-events: none;
+            }
+        }
+
+
+        // =================================================
+        // INPUT BLOCK
+        // =================================================
+
+        .input-block {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            .label-row {
+                width: 100%;
+
+                margin-bottom: 7px;
+
+                display: flex;
+                align-items: center;
+
+                gap: 8px;
+
+                label {
+                    color: #d7dbe0;
+
+                    font-size: 13px;
+                    font-weight: 600;
+
+                    line-height: 1.3;
+                }
+            }
+        }
+
+
+        // =================================================
+        // RESUME UPLOAD
+        // =================================================
+
+        .upload-box {
+            width: 100%;
+            height: 112px;
+
+            padding: 12px;
+
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background: #1b2130;
+
+            border: 1px dashed #353f4d;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease;
+
+            .upload-icon {
+                margin-bottom: 5px;
+
+                color: #ef2d7b;
+
+                font-size: 24px;
+
+                line-height: 1;
+            }
+
+            strong {
+                max-width: 90%;
+
+                overflow: hidden;
+
+                color: #e1e4e8;
+
+                font-size: 13px;
+                font-weight: 600;
+
+                line-height: 1.3;
+
+                text-overflow: ellipsis;
+
+                white-space: nowrap;
+            }
+
+            span {
+                margin-top: 4px;
+
+                color: #707a87;
+
+                font-size: 11px;
+
+                line-height: 1.3;
+            }
+
+            &:hover {
+                background: #1e2534;
+
+                border-color: #e02b78;
+
+                .upload-icon {
+                    transform: translateY(-2px);
+                }
+            }
+        }
+
+
+        // =================================================
+        // OR DIVIDER
+        // =================================================
+
+        .or-divider {
+            width: 100%;
+            height: 27px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            color: #606a77;
+
+            font-size: 10px;
+
+            &::before,
+            &::after {
+                content: "";
+
+                height: 1px;
+
+                flex: 1;
+
+                background: #252e37;
+            }
+
+            span {
+                padding: 0 3px;
+            }
+        }
+
+
+        // =================================================
+        // SELF DESCRIPTION
+        // =================================================
+
+        .self-description {
+            width: 100%;
+            height: 90px;
+
+            padding: 12px;
+
+            box-sizing: border-box;
+
+            background: #141a23;
+
+            border: 1px solid #e02b78;
+
+            border-radius: 7px;
+
+            outline: none;
+
+            color: #dfe3e8;
+
+            font-family: inherit;
+
+            font-size: 12px;
+
+            line-height: 1.55;
+
+            resize: none;
+
+            transition:
+                box-shadow 0.2s ease;
+
+            &::placeholder {
+                color: #626c79;
+            }
+
+            &:hover {
+                border-color: #f03582;
+            }
+
+            &:focus {
+                box-shadow:
+                    0 0 0 3px rgba(224, 43, 120, 0.08);
+            }
+        }
+
+
+        // =================================================
+        // INFORMATION MESSAGE
+        // =================================================
+
+        .info-message {
+            width: 100%;
+
+            min-height: 52px;
+
+            margin-top: 9px;
+
+            padding: 9px 11px;
+
+            display: flex;
+            align-items: flex-start;
+
+            gap: 9px;
+
+            box-sizing: border-box;
+
+            background: #182b4d;
+
+            border: 1px solid #234777;
+
+            border-radius: 6px;
+
+            .info-icon {
+                width: 15px;
+                height: 15px;
+
+                flex-shrink: 0;
+
+                margin-top: 1px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 50%;
+
+                background: #438de0;
+
+                color: #ffffff;
+
+                font-size: 9px;
+                font-weight: 700;
+            }
+
+            p {
+                min-width: 0;
+
+                margin: 0;
+
+                color: #aabdd6;
+
+                font-size: 11px;
+
+                line-height: 1.5;
+
+                strong {
+                    color: #dce8f7;
+                }
+            }
+        }
+
+
+        // =================================================
+        // CARD FOOTER
+        // =================================================
+
+        .card-footer {
+            width: 100%;
+            height: 65px;
+
+            padding: 0 24px;
+
+            box-sizing: border-box;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            background: #111820;
+
+            border-top: 1px solid #29313b;
+
+            .generation-time {
+                color: #687380;
+
+                font-size: 11px;
+
+                white-space: nowrap;
+            }
+
+            .generate-btn {
+                width: 260px;
+                height: 40px;
+
+                flex-shrink: 0;
+
+                padding: 0 18px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                gap: 8px;
+
+                border: none;
+
+                border-radius: 7px;
+
+                background: linear-gradient(
+                    135deg,
+                    #ef2475,
+                    #f32b7d
+                );
+
+                color: #ffffff;
+
+                font-family: inherit;
+
+                font-size: 13px;
+                font-weight: 650;
+
+                cursor: pointer;
+
+                box-shadow:
+                    0 7px 20px rgba(239, 36, 117, 0.18);
+
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease,
+                    background 0.2s ease;
+
+                span {
+                    font-size: 14px;
+                }
+
+                &:hover {
+                    background: linear-gradient(
+                        135deg,
+                        #f32b7d,
+                        #ff3987
+                    );
+
+                    transform: translateY(-1px);
+
+                    box-shadow:
+                        0 10px 25px rgba(239, 36, 117, 0.28);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+
+    // =====================================================
+    // PAGE FOOTER
+    // =====================================================
+
+    .footer {
+        flex-shrink: 0;
+
+        margin-top: 13px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+
+        a {
+            color: #59636f;
+
+            font-size: 10px;
+
+            text-decoration: none;
+
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #a5adb7;
+            }
+        }
+    }
+
+
+    // =====================================================
+    // LAPTOP
+    // 1366 x 768 / 1440 x 768
+    // =====================================================
+
+    @media (max-height: 800px) and (min-width: 769px) {
+
+        padding-top: 16px;
+        padding-bottom: 8px;
+
+
+        .hero {
+            margin-bottom: 14px;
+
+            h1 {
+                font-size: 31px;
+            }
+
+            p {
+                margin-top: 5px;
+
+                font-size: 13px;
+            }
+        }
+
+
+        .interview-card {
+            height: 490px;
+
+
+            .form-content {
+                height: 430px;
+            }
+
+
+            .job-section,
+            .profile-section {
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+
+            .section-header {
+                margin-bottom: 9px;
+
+                .title-wrapper {
+
+                    h2 {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+
+            .textarea-wrapper {
+                height: 365px;
+
+                textarea {
+                    font-size: 12px;
+                }
+            }
+
+
+            .input-block {
+
+                .label-row {
+
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+            .upload-box {
+                height: 95px;
+
+                .upload-icon {
+                    font-size: 21px;
+                }
+
+                strong {
+                    font-size: 12px;
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+
+
+            .or-divider {
+                height: 24px;
+            }
+
+
+            .self-description {
+                height: 75px;
+
+                font-size: 11px;
+            }
+
+
+            .info-message {
+                min-height: 45px;
+
+                padding: 7px 9px;
+
+                p {
+                    font-size: 10px;
+                }
+            }
+
+
+            .card-footer {
+                height: 60px;
+
+                .generation-time {
+                    font-size: 10px;
+                }
+
+                .generate-btn {
+                    height: 38px;
+
+                    font-size: 12px;
+                }
+            }
+        }
+
+
+        .footer {
+            margin-top: 7px;
+
+            a {
+                font-size: 9px;
+            }
+        }
+    }
+
+
+    // =====================================================
+    // TABLET
+    // =====================================================
+
+    @media (max-width: 768px) {
+
+        min-height: 100vh;
+
+        height: auto;
+
+        padding:
+            25px
+            15px;
+
+        overflow-y: auto;
+
+
+        .hero {
+            margin-bottom: 22px;
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 12px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+
+        .interview-card {
+            height: auto;
+
+            max-width: 600px;
+
+
+            .form-content {
+                height: auto;
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .job-section {
+                border-right: none;
+
+                border-bottom: 1px solid #29313b;
+            }
+
+
+            .textarea-wrapper {
+                height: 280px;
+            }
+
+
+            .profile-section {
+                padding-top: 20px;
+            }
+
+
+            .card-footer {
+                height: auto;
+
+                padding: 15px 18px;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                .generation-time {
+                    text-align: center;
+                }
+
+                .generate-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    // =====================================================
+    // MOBILE
+    // =====================================================
+
+    @media (max-width: 480px) {
+
+        padding:
+            20px
+            10px;
+
+
+        .hero {
+
+            margin-bottom: 18px;
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 11px;
+            }
+        }
+
+
+        .interview-card {
+
+            border-radius: 9px;
+
+
+            .job-section,
+            .profile-section {
+                padding: 16px;
+            }
+
+
+            .section-header {
+
+                .title-wrapper {
+
+                    h2 {
+                        font-size: 13px;
+                    }
+                }
+
+                .badge {
+                    padding: 3px 6px;
+
+                    font-size: 8px;
+                }
+            }
+
+
+            .textarea-wrapper {
+                height: 230px;
+
+                textarea {
+                    font-size: 12px;
+                }
+            }
+
+
+            .input-block {
+
+                .label-row {
+
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+
+            .upload-box {
+                height: 110px;
+
+                .upload-icon {
+                    font-size: 22px;
+                }
+
+                strong {
+                    font-size: 12px;
+                }
+
+                span {
+                    font-size: 10px;
+                }
+            }
+
+
+            .self-description {
+                height: 90px;
+
+                font-size: 11px;
+            }
+
+
+            .info-message {
+
+                p {
+                    font-size: 10px;
+                }
+            }
+
+
+            .card-footer {
+
+                .generation-time {
+                    font-size: 9px;
+                }
+
+                .generate-btn {
+                    height: 42px;
+
+                    font-size: 12px;
+                }
+            }
+        }
+
+
+        .footer {
+            margin-top: 15px;
+
+            gap: 15px;
+
+            a {
+                font-size: 9px;
+            }
+        }
+    }
+}
